@@ -1093,7 +1093,7 @@ function MediaUnlockTest_FOD() {
 
 function MediaUnlockTest_Tiktok_Region(){
     echo -n -e " Tiktok Region:\t\t\t\t->\c";
-    local Ftmpresult=$(curl $useNIC -${1} ${ssll} --user-agent "${UA_Browser}" -s --max-time 10 "https://www.tiktok.com/")
+    local Ftmpresult=$(curl $useNIC -${1} ${ssll} -s "https://www.tiktok.com/")
 	
 	if [[ "$Ftmpresult" = "curl"* ]]; then
 		echo -n -e "\r Tiktok Region:\t\t\t\t${Font_Red}Failed (Network Connection)${Font_Suffix}\n"
